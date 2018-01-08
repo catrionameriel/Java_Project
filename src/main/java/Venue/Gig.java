@@ -7,17 +7,22 @@ public class Gig extends Event {
     private ArrayList<Artist> artists;
     private ArrayList<Ticket> soldTickets;
     private ArrayList<Ticket> unsoldTickets;
-    private double ticketPrice;
+    private double gigPrice;
 
-    public Gig(int day, int month, int year, int capacity, double ticketPrice) {
+    public Gig(int day, int month, int year, int capacity, double gigPrice) {
         super(day, month, year, capacity);
         soldTickets = new ArrayList<>();
         unsoldTickets = new ArrayList<>();
-        for(int i=0; i < capacity; i++){
-            unsoldTickets.add(new Ticket(i));
-        }
+        fillUnsoldTickets();
         artists = new ArrayList<>();
-        this.ticketPrice = ticketPrice;
+        this.gigPrice = gigPrice;
+
+    }
+
+    private void fillUnsoldTickets(){
+        for(int i=0; i < capacity; i++){
+            unsoldTickets.add(new Ticket(i, this.gigPrice));
+        }
     }
 
     public int getNumberOfSoldTickets(){
@@ -32,14 +37,6 @@ public class Gig extends Event {
         return artists.size();
     }
 
-    public double getTicketPrice(){
-        return ticketPrice;
-    }
-
-    public void setTicketPrice(double newPrice) {
-        this.ticketPrice = newPrice;
-    }
-
     public void addArtist(String newArtist) {
         Artist artist = new Artist(newArtist);
         artists.add(artist);
@@ -48,5 +45,13 @@ public class Gig extends Event {
     @Override
     public void sell() {
 
+    }
+
+    public double getGigPrice() {
+        return gigPrice;
+    }
+
+    public void setGigPrice(double gigPrice) {
+        this.gigPrice = gigPrice;
     }
 }

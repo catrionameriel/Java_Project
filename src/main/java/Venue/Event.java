@@ -4,8 +4,8 @@ import java.util.GregorianCalendar;
 
 public abstract class Event implements ITransaction{
 
-    private GregorianCalendar date;
-    private int capacity;
+    protected GregorianCalendar date;
+    protected int capacity;
 
    protected Event(int day, int month, int year, int capacity){
         this.date = new GregorianCalendar(year, month, day);

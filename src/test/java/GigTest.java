@@ -48,13 +48,13 @@ public class GigTest {
 
     @Test
     public void canGetPrice(){
-        assertEquals(12.50, gig1.getTicketPrice(), 0.01);
+        assertEquals(12.50, gig1.getGigPrice(), 0.01);
     }
 
     @Test
     public void canSetPrice(){
-        gig1.setTicketPrice(10.50);
-        assertEquals(10.50, gig1.getTicketPrice(), 0.01);
+        gig1.setGigPrice(10.50);
+        assertEquals(10.50, gig1.getGigPrice(), 0.01);
     }
 
     @Test
