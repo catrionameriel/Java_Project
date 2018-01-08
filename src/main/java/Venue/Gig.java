@@ -42,8 +42,17 @@ public class Gig extends Event {
         artists.add(artist);
     }
 
-    @Override
+    public void addTicketToSold(Ticket ticket){
+        soldTickets.add(ticket);
+    }
+
+    public Ticket removeFirstTicketFromUnsold(){
+        return unsoldTickets.remove(0);
+    }
+
     public void sell() {
+       Ticket ticket = removeFirstTicketFromUnsold();
+       addTicketToSold(ticket);
 
     }
 

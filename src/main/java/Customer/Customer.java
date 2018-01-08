@@ -1,6 +1,5 @@
 package Customer;
 
-import Venue.ITransaction;
 import Venue.Ticket;
 
 import java.util.ArrayList;
@@ -52,6 +51,13 @@ public class Customer {
 
     public double getTotalFunds(){
         return totalFunds;
+    }
+
+    public void buyTicket(Ticket ticket, PaymentMethod paymentMethodChoice){
+//        find price of ticket
+//        take money away from paymentMethod
+//        add ticket to ArrayList
+//        update totalfunds
     }
 
 }

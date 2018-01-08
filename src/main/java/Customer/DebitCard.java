@@ -9,7 +9,8 @@ public class DebitCard extends CardPayment {
         typeOfDebitCard = type;
     }
 
-
-
+    public DebitCardType getDebitCardType(){
+        return this.typeOfDebitCard;
+    }
 
 }
