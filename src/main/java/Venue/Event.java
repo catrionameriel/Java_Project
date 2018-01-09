@@ -2,12 +2,13 @@ package Venue;
 
 import java.util.GregorianCalendar;
 
-public abstract class Event implements ITransaction{
+    public abstract class Event //implements ISell
+    {
 
     protected GregorianCalendar date;
     protected int capacity;
 
-   protected Event(int day, int month, int year, int capacity){
+    protected Event(int day, int month, int year, int capacity){
         this.date = new GregorianCalendar(year, month, day);
         this.capacity = capacity;
     }

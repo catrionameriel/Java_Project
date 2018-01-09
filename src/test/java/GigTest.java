@@ -1,4 +1,5 @@
 import Venue.Gig;
+import Venue.Ticket;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,9 +9,11 @@ import static org.junit.Assert.assertNotNull;
 public class GigTest {
 
     private Gig gig1;
+    private Ticket ticket;
 
     @Before
     public void before(){
+        ticket = new Ticket(1, 10.50);
         gig1 = new Gig(17,1, 2018, 20000, 12.50);
     }
 
@@ -66,6 +69,25 @@ public class GigTest {
     public void canAddArtistsToGig(){
         gig1.addArtist("Bonnie Prince Billy");
         assertEquals(1, gig1.getNumberOfArtistsOnBill());
+    }
+
+    @Test
+    public void canAddTicketToSold(){
+        gig1.addTicketToSold(ticket);
+        assertEquals(1, gig1.getNumberOfSoldTickets());
+    }
+
+    @Test
+    public void canRemoveTicketFromUnsold(){
+        gig1.removeFirstTicketFromUnsold();
+        assertEquals(19999, gig1.getNumberOfUnsoldTickets());
+    }
+
+    @Test
+    public void canSellTicket(){
+        gig1.sellTicket();
+        assertEquals(19999, gig1.getNumberOfUnsoldTickets());
+        assertEquals(1, gig1.getNumberOfSoldTickets());
     }
 
 //    How do I do a pretty date?

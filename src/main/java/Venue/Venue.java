@@ -1,24 +1,27 @@
 package Venue;
 
+import Customer.Customer;
+
 import java.util.ArrayList;
 
 public class Venue {
 
     private double totalSales;
     private double totalRefunds;
-    private ArrayList<ITransaction> transactions;
+    private ArrayList<Event> listOfSales;
     private ArrayList<PaymentMethodType> paymentMethods;
+    private ArrayList<Customer> customerQueue;
 
 
     public Venue(){
         totalSales = 0;
         totalRefunds = 0;
-        transactions = new ArrayList<>();
+        listOfSales = new ArrayList<>();
         paymentMethods = new ArrayList<>();
         paymentMethods.add(PaymentMethodType.CASH);
         paymentMethods.add(PaymentMethodType.CREDITCARD);
         paymentMethods.add(PaymentMethodType.DEBITCARD);
-
+        customerQueue = new ArrayList<>();
     }
 
     public double getTotalSales() {
@@ -30,22 +33,22 @@ public class Venue {
     }
 
     public int countTransactions() {
-        return transactions.size();
+        return listOfSales.size();
     }
 
-    public void addTransaction(ITransaction item) {
-        transactions.add(item);
+    public void addTransaction(Event sale) {
+        listOfSales.add(sale);
     }
 
-    public void removeTransaction(ITransaction item) {
-        transactions.remove(item);
+    public void removeTransaction(Event sale) {
+        listOfSales.remove(sale);
     }
 
-    public void giveRefund(double refund) {
+    public void addToRefundAmount(double refund) {
         totalRefunds += refund;
     }
 
-    public void sell(double price) {
+    public void addToSalesAmount(double price) {
         totalSales += price;
     }
 
@@ -70,5 +73,36 @@ public class Venue {
         return paymentMethods.get(index);
     }
 
+    public void sellTicketToGig(Gig sale){
+//       check payment type is ok
+//       check capacity
+//
+//       get customer
+         Customer customer = customerQueue.get(0);
+//
+//       get price from item
+         double price = sale.getGigPrice();
+//
+//       add that money to totalSales
+         addToSalesAmount(price);
 
+//       trigger sale in gig
+         Ticket ticket = sale.sellTicket();
+
+//       add to listOfSales
+         listOfSales.add(sale);
+    }
+
+
+    public void addCustomerToQueue(Customer customer) {
+        customerQueue.add(customer);
+    }
+
+    public int countCustomersInQueue() {
+        return customerQueue.size();
+    }
+
+    public void removeCustomerFromQueue() {
+        customerQueue.remove(0);
+    }
 }

@@ -53,11 +53,19 @@ public class Customer {
         return totalFunds;
     }
 
+    public void setTotalFunds(double money){
+        totalFunds -= money;
+    }
+
     public void buyTicket(Ticket ticket, PaymentMethod paymentMethodChoice){
 //        find price of ticket
+          double price = ticket.getTicketPrice();
 //        take money away from paymentMethod
-//        add ticket to ArrayList
+          paymentMethodChoice.pay(price);
 //        update totalfunds
+          setTotalFunds(price);
+//        add ticket to basket
+          addItemInBasket(ticket);
     }
 
 }

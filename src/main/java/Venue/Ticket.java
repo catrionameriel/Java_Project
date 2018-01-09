@@ -1,6 +1,6 @@
 package Venue;
 
-public class Ticket implements ITransaction {
+public class Ticket {
 
     private double price;
     private int id;
@@ -22,8 +22,4 @@ public class Ticket implements ITransaction {
         this.price = newPrice;
     }
 
-    @Override
-    public void sell() {
-
-    }
 }

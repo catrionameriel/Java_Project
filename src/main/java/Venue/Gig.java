@@ -16,12 +16,11 @@ public class Gig extends Event {
         fillUnsoldTickets();
         artists = new ArrayList<>();
         this.gigPrice = gigPrice;
-
     }
 
     private void fillUnsoldTickets(){
         for(int i=0; i < capacity; i++){
-            unsoldTickets.add(new Ticket(i, this.gigPrice));
+            unsoldTickets.add(new Ticket(i));
         }
     }
 
@@ -50,10 +49,10 @@ public class Gig extends Event {
         return unsoldTickets.remove(0);
     }
 
-    public void sell() {
+    public Ticket sellTicket() {
        Ticket ticket = removeFirstTicketFromUnsold();
        addTicketToSold(ticket);
-
+       return ticket;
     }
 
     public double getGigPrice() {

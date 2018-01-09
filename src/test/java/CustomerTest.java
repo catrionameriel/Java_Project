@@ -2,7 +2,6 @@ import Customer.CreditCard;
 import Customer.CreditCardType;
 import Customer.Customer;
 import Customer.PaymentMethod;
-import Venue.ITransaction;
 import Venue.Ticket;
 import org.junit.Before;
 import org.junit.Test;
@@ -88,5 +87,10 @@ public class CustomerTest {
         customer1.addItemInBasket(ticket);
         customer1.removeItemInBasket(ticket);
         assertEquals(0, customer1.countItemsInBasket());
+    }
+
+    @Test
+    public void canChoosePaymentMethod(){
+
     }
 }
