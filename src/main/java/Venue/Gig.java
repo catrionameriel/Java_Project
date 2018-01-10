@@ -20,7 +20,7 @@ public class Gig extends Event implements ISell {
 
     private void fillUnsoldTickets(){
         for(int i=0; i < capacity; i++){
-            unsoldTickets.add(new Ticket(i));
+            unsoldTickets.add(new Ticket(i, this.gigPrice));
         }
     }
 
@@ -63,5 +63,10 @@ public class Gig extends Event implements ISell {
     @Override
     public double getPrice() {
         return this.gigPrice;
+    }
+
+    @Override
+    public boolean canSell() {
+        return (this.unsoldTickets.size() > 0) true : null;
     }
 }

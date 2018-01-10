@@ -46,7 +46,7 @@ public class Customer {
     }
 
     public void removeItemInBasket(Ticket ticket) {
-        basket.remove(item);
+        basket.remove(ticket);
     }
 
     public double getTotalFunds(){
@@ -57,16 +57,15 @@ public class Customer {
         totalFunds += money;
     }
 
-    public void buyBasket(Ticket ticket, PaymentMethod paymentMethodChoice){
+    public void buyBasket(PaymentMethod paymentMethodChoice){
+          for (Ticket ticket : basket) {
 //        find price of ticket
-          double price = gig.getGigPrice();
+              double price = ticket.getTicketPrice();
 //        take money away from paymentMethod
-          paymentMethodChoice.pay(price);
+              paymentMethodChoice.pay(price);
 //        update total funds
-          setTotalFunds(-price);
-//        add ticket to basket
-          Ticket ticket = gig.sellTicket();
-          addItemInBasket(ticket);
+              setTotal();
+          }
     }
 
 }

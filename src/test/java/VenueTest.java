@@ -11,7 +11,7 @@ import static org.junit.Assert.assertNotNull;
 public class VenueTest {
 
     private Venue gigVenue;
-    private Event item;
+    private ISell item;
     private PaymentMethodType creditCard;
     private Customer customer;
     private PaymentMethod card;
@@ -23,6 +23,9 @@ public class VenueTest {
         pMethods.add(card);
         customer = new Customer(pMethods);
         gigVenue = new Venue();
+        gigVenue.addTPaymentMethodType(PaymentMethodType.CASH);
+        gigVenue.addTPaymentMethodType(PaymentMethodType.CREDITCARD);
+        gigVenue.addTPaymentMethodType(PaymentMethodType.DEBITCARD);
         item = new Gig(12,1, 2015,200, 12.50);
         creditCard = PaymentMethodType.CREDITCARD;
     }

@@ -8,19 +8,16 @@ public class Venue {
 
     private double totalSales;
     private double totalRefunds;
-    private ArrayList<Event> listOfSales;
+    private ArrayList<ISell> listOfSales;
     private ArrayList<PaymentMethodType> paymentMethods;
     private ArrayList<Customer> customerQueue;
 
 
-    public Venue(){
+    public Venue() {
         totalSales = 0;
         totalRefunds = 0;
         listOfSales = new ArrayList<>();
         paymentMethods = new ArrayList<>();
-        paymentMethods.add(PaymentMethodType.CASH);
-        paymentMethods.add(PaymentMethodType.CREDITCARD);
-        paymentMethods.add(PaymentMethodType.DEBITCARD);
         customerQueue = new ArrayList<>();
     }
 
@@ -36,11 +33,11 @@ public class Venue {
         return listOfSales.size();
     }
 
-    public void addTransaction(Event sale) {
+    public void addTransaction(ISell sale) {
         listOfSales.add(sale);
     }
 
-    public void removeTransaction(Event sale) {
+    public void removeTransaction(ISell sale) {
         listOfSales.remove(sale);
     }
 
@@ -56,11 +53,15 @@ public class Venue {
         return totalSales -= totalRefunds;
     }
 
-    public ArrayList<PaymentMethodType> getAllPaymentMethods(){
+    public ArrayList<PaymentMethodType> getAllPaymentMethods() {
         return paymentMethods;
     }
 
-    public void removePaymentType(PaymentMethodType paymentType){
+    public void addTPaymentMethodType(PaymentMethodType paymentMethod) {
+        paymentMethods.add(paymentMethod);
+    }
+
+    public void removePaymentType(PaymentMethodType paymentType) {
         paymentMethods.remove(paymentType);
     }
 
@@ -73,28 +74,26 @@ public class Venue {
         return paymentMethods.get(index);
     }
 
-//    public customer Checkout
+    public void CheckoutCustomer (){
+//      check payment type is ok
+//      get price from item
+    double price = sale.getPrice();
 
-    public Ticket sellTicketToGig(ISell sale, PaymentMethodType paymentMethod){
-//       check payment type is ok
-//       check capacity
-//
-//       get customer
-         Customer customer = customerQueue.get(0);
-//
-//       get price from item
-         double price = sale.getGigPrice();
-//
+    //
 //       add that money to totalSales
-         addToSalesAmount(price);
+    addToSalesAmount(price);
 
 //       add to listOfSales
          listOfSales.add(sale);
+}
 
-//       trigger customer buying
-//         customer.buyTicket(sale, paymentMethod);
+    public void sellTicket(ISell item, PaymentMethodType paymentMethod){
+//       check capacity
+//
+         Customer customer = customerQueue.get(0);
+         Ticket ticket = item.sell();
+         customer.addItemInBasket(ticket);
     }
-
 
     public void addCustomerToQueue(Customer customer) {
         customerQueue.add(customer);

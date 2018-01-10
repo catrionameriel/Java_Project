@@ -18,15 +18,15 @@ public class TicketTest {
         assertEquals(1, ticket.getID());
     }
 
-//    @Test
-//    public void canGetPrice(){
-//        assertEquals(10.50, ticket.getTicketPrice(),0.01);
-//    }
-//
-//    @Test
-//    public void canSetPrice(){
-//        ticket.setTicketPrice(11.50);
-//        assertEquals(11.50, ticket.getTicketPrice(),0.01);
-//    }
+    @Test
+    public void canGetPrice(){
+        assertEquals(10.50, ticket.getTicketPrice(),0.01);
+    }
+
+    @Test
+    public void canSetPrice(){
+        ticket.setTicketPrice(11.50);
+        assertEquals(11.50, ticket.getTicketPrice(),0.01);
+    }
 
 }

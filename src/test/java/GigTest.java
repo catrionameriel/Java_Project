@@ -13,7 +13,7 @@ public class GigTest {
 
     @Before
     public void before(){
-        ticket = new Ticket(1);
+        ticket = new Ticket(1, 12.50);
         gig1 = new Gig(17,1, 2018, 20000, 12.50);
     }
 
@@ -51,13 +51,13 @@ public class GigTest {
 
     @Test
     public void canGetPrice(){
-        assertEquals(12.50, gig1.getGigPrice(), 0.01);
+        assertEquals(12.50, gig1.getPrice(), 0.01);
     }
 
     @Test
     public void canSetPrice(){
         gig1.setGigPrice(10.50);
-        assertEquals(10.50, gig1.getGigPrice(), 0.01);
+        assertEquals(10.50, gig1.getPrice(), 0.01);
     }
 
     @Test
@@ -85,7 +85,7 @@ public class GigTest {
 
     @Test
     public void canSellTicket(){
-        gig1.sellTicket();
+        gig1.sell();
         assertEquals(19999, gig1.getNumberOfUnsoldTickets());
         assertEquals(1, gig1.getNumberOfSoldTickets());
     }
