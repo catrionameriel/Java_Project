@@ -11,7 +11,7 @@ import static org.junit.Assert.assertNotNull;
 public class VenueTest {
 
     private Venue gigVenue;
-    private Venue.Event item;
+    private Event item;
     private PaymentMethodType creditCard;
     private Customer customer;
     private PaymentMethod card;
@@ -104,5 +104,10 @@ public class VenueTest {
         gigVenue.addCustomerToQueue(customer);
         gigVenue.removeCustomerFromQueue();
         assertEquals(0, gigVenue.countCustomersInQueue());
+    }
+
+    @Test
+    public void enoughTickets(){
+        assertEquals(true, gigVenue.enoughTickets(item));
     }
 }

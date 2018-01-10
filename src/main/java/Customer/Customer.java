@@ -41,11 +41,11 @@ public class Customer {
         return basket.size();
     }
 
-    public void addItemInBasket(Ticket item) {
-        basket.add(item);
+    public void addItemInBasket(Ticket ticket) {
+        basket.add(ticket);
     }
 
-    public void removeItemInBasket(Ticket item) {
+    public void removeItemInBasket(Ticket ticket) {
         basket.remove(item);
     }
 
@@ -54,17 +54,18 @@ public class Customer {
     }
 
     public void setTotalFunds(double money){
-        totalFunds -= money;
+        totalFunds += money;
     }
 
-    public void buyTicket(Ticket ticket, PaymentMethod paymentMethodChoice){
+    public void buyBasket(Ticket ticket, PaymentMethod paymentMethodChoice){
 //        find price of ticket
-          double price = ticket.getTicketPrice();
+          double price = gig.getGigPrice();
 //        take money away from paymentMethod
           paymentMethodChoice.pay(price);
-//        update totalfunds
-          setTotalFunds(price);
+//        update total funds
+          setTotalFunds(-price);
 //        add ticket to basket
+          Ticket ticket = gig.sellTicket();
           addItemInBasket(ticket);
     }
 

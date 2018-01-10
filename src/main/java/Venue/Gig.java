@@ -2,7 +2,7 @@ package Venue;
 
 import java.util.ArrayList;
 
-public class Gig extends Event {
+public class Gig extends Event implements ISell {
 
     private ArrayList<Artist> artists;
     private ArrayList<Ticket> soldTickets;
@@ -49,17 +49,19 @@ public class Gig extends Event {
         return unsoldTickets.remove(0);
     }
 
-    public Ticket sellTicket() {
-       Ticket ticket = removeFirstTicketFromUnsold();
-       addTicketToSold(ticket);
-       return ticket;
-    }
-
-    public double getGigPrice() {
-        return gigPrice;
-    }
-
     public void setGigPrice(double gigPrice) {
         this.gigPrice = gigPrice;
+    }
+
+    @Override
+    public Ticket sell() {
+        Ticket ticket = removeFirstTicketFromUnsold();
+        addTicketToSold(ticket);
+        return ticket;
+    }
+
+    @Override
+    public double getPrice() {
+        return this.gigPrice;
     }
 }

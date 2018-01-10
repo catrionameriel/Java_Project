@@ -13,7 +13,7 @@ public class GigTest {
 
     @Before
     public void before(){
-        ticket = new Ticket(1, 10.50);
+        ticket = new Ticket(1);
         gig1 = new Gig(17,1, 2018, 20000, 12.50);
     }
 

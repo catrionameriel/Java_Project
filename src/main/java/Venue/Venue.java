@@ -73,7 +73,9 @@ public class Venue {
         return paymentMethods.get(index);
     }
 
-    public void sellTicketToGig(Gig sale){
+//    public customer Checkout
+
+    public Ticket sellTicketToGig(ISell sale, PaymentMethodType paymentMethod){
 //       check payment type is ok
 //       check capacity
 //
@@ -86,11 +88,11 @@ public class Venue {
 //       add that money to totalSales
          addToSalesAmount(price);
 
-//       trigger sale in gig
-         Ticket ticket = sale.sellTicket();
-
 //       add to listOfSales
          listOfSales.add(sale);
+
+//       trigger customer buying
+//         customer.buyTicket(sale, paymentMethod);
     }
 
 
@@ -104,5 +106,9 @@ public class Venue {
 
     public void removeCustomerFromQueue() {
         customerQueue.remove(0);
+    }
+
+    public boolean enoughTickets(Gig gig){
+        return gig.getNumberOfUnsoldTickets() > 0;
     }
 }

@@ -10,7 +10,7 @@ public class TicketTest {
 
     @Before
     public void before(){
-        ticket = new Ticket(1, 10.50);
+        ticket = new Ticket(1);
     }
 
     @Test
@@ -18,15 +18,15 @@ public class TicketTest {
         assertEquals(1, ticket.getID());
     }
 
-    @Test
-    public void canGetPrice(){
-        assertEquals(10.50, ticket.getTicketPrice(),0.01);
-    }
-
-    @Test
-    public void canSetPrice(){
-        ticket.setTicketPrice(11.50);
-        assertEquals(11.50, ticket.getTicketPrice(),0.01);
-    }
+//    @Test
+//    public void canGetPrice(){
+//        assertEquals(10.50, ticket.getTicketPrice(),0.01);
+//    }
+//
+//    @Test
+//    public void canSetPrice(){
+//        ticket.setTicketPrice(11.50);
+//        assertEquals(11.50, ticket.getTicketPrice(),0.01);
+//    }
 
 }

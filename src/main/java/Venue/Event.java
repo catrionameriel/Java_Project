@@ -2,8 +2,7 @@ package Venue;
 
 import java.util.GregorianCalendar;
 
-    public abstract class Event //implements ISell
-    {
+    public abstract class Event {
 
     protected GregorianCalendar date;
     protected int capacity;

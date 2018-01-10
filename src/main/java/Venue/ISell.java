@@ -2,6 +2,9 @@ package Venue;
 
 public interface ISell {
 
-        Object sell();
+        Ticket sell();
+
+        double getPrice();
 }
+
 
