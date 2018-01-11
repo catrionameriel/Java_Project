@@ -10,12 +10,11 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
 
 public class VenueTest {
 
     private Venue gigVenue;
-    private Gig item;
+    private Gig gig;
     private PaymentMethodType creditCard;
     private Customer customer;
     private PaymentMethod card;
@@ -30,7 +29,7 @@ public class VenueTest {
         gigVenue.addTPaymentMethodType(PaymentMethodType.CASH);
         gigVenue.addTPaymentMethodType(PaymentMethodType.CREDITCARD);
         gigVenue.addTPaymentMethodType(PaymentMethodType.DEBITCARD);
-        item = new Gig(12,1, 2015,200, 12.50);
+        gig = new Gig(12,1, 2015,200, 12.50);
         creditCard = PaymentMethodType.CREDITCARD;
     }
 
@@ -51,14 +50,14 @@ public class VenueTest {
 
     @Test
     public void canAddToTransactions(){
-        gigVenue.addTransaction(item);
+        gigVenue.addTransaction(gig);
         assertEquals(1, gigVenue.countTransactions());
     }
 
     @Test
     public void canRemoveFromTransactions(){
-        gigVenue.addTransaction(item);
-        gigVenue.removeTransaction(item);
+        gigVenue.addTransaction(gig);
+        gigVenue.removeTransaction(gig);
         assertEquals(0, gigVenue.countTransactions());
     }
 
@@ -116,17 +115,29 @@ public class VenueTest {
     @Test
     public void canSellTicket() {
         gigVenue.addCustomerToQueue(customer);
-        gigVenue.sellTicket(item);
+        gigVenue.sellTicket(gig);
         assertEquals(1, customer.countItemsInBasket());
+        assertEquals(1, gigVenue.countTransactions());
     }
 
     @Test
     public void cannotSellTicketIfSoldOut() {
-        for (int i=0; i< item.getCapacity(); i++){
-            item.removeFirstTicketFromUnsold();
+        for (int i=0; i< gig.getCapacity(); i++){
+            gig.removeFirstTicketFromUnsold();
         }
         gigVenue.addCustomerToQueue(customer);
-        gigVenue.sellTicket(item);
+        gigVenue.sellTicket(gig);
+        assertEquals(0, customer.countItemsInBasket());
+    }
+
+    @Test
+    public void canCheckoutBasket(){
+        gigVenue.addCustomerToQueue(customer);
+        gigVenue.sellTicket(gig);
+        customer.buyBasket(card);
+        gigVenue.checkoutCustomer();
+        assertEquals(12.50, gigVenue.getTotalSales(), 0.01);
+        assertEquals(1, gigVenue.countTransactions());
         assertEquals(0, customer.countItemsInBasket());
     }
 }

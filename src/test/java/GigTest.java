@@ -103,6 +103,16 @@ public class GigTest {
         assertEquals(false, gig1.canSell());
     }
 
+    @Test
+    public void canGetTicketPrice(){
+        assertEquals(12.50, gig1.getTicketPriceFromUnsoldTickets(), 0.01);
+    }
+
+    @Test
+    public void canGetTicketID(){
+        assertEquals(1, gig1.getTicketIDFromUnsoldTickets());
+    }
+
 //    How do I do a pretty date?
 
 //    @Test

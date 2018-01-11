@@ -9,6 +9,7 @@ public class Customer {
 
     private ArrayList<Ticket> basket;
     private ArrayList<PaymentMethod> paymentMethods;
+//    add preferred payment method - maybe first card in AL
     private double totalFunds;
 
     public Customer(ArrayList<PaymentMethod> paymentMethods){
@@ -73,4 +74,7 @@ public class Customer {
             setTotal();
     }
 
+    public void clearBasket() {
+        basket.clear();
+    }
 }

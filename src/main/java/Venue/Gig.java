@@ -11,11 +11,11 @@ public class Gig extends Event implements ISell {
 
     public Gig(int day, int month, int year, int capacity, double gigPrice) {
         super(day, month, year, capacity);
+        this.gigPrice = gigPrice;
         soldTickets = new ArrayList<>();
         unsoldTickets = new ArrayList<>();
         fillUnsoldTickets();
         artists = new ArrayList<>();
-        this.gigPrice = gigPrice;
     }
 
     private void fillUnsoldTickets(){
@@ -68,5 +68,16 @@ public class Gig extends Event implements ISell {
     @Override
     public boolean canSell() {
         return (this.unsoldTickets.size() > 0);
+    }
+
+//    Debugging methods
+    public double getTicketPriceFromUnsoldTickets(){
+        Ticket ticket = unsoldTickets.get(0);
+        return ticket.getTicketPrice();
+    }
+
+    public int getTicketIDFromUnsoldTickets(){
+        Ticket ticket = unsoldTickets.get(1);
+        return ticket.getID();
     }
 }

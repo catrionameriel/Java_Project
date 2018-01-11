@@ -1,7 +1,6 @@
 package Venue;
 
 import Customer.Customer;
-import Payments.PaymentMethod;
 
 import java.util.ArrayList;
 
@@ -11,6 +10,7 @@ public class Venue {
     private double totalRefunds;
     private ArrayList<ISell> listOfSales;
     private ArrayList<PaymentMethodType> paymentMethods;
+//    change the above to PaymentMethods rather than enum
     private ArrayList<Customer> customerQueue;
 
 
@@ -87,12 +87,13 @@ public class Venue {
         customerQueue.remove(0);
     }
 
-    public void sellTicket(ISell item){
+    public void sellTicket(ISell eventItem){
         Customer customer = customerQueue.get(0);
-        if(item.canSell()){
-            Ticket ticket = item.sell();
+        if(eventItem.canSell()) {
+            Ticket ticket = eventItem.sell();
             customer.addItemInBasket(ticket);
         }
+        listOfSales.add(eventItem);
     }
 
 //    public boolean checkPaymentType(PaymentMethod paymentMethod){
@@ -101,15 +102,17 @@ public class Venue {
 //        }
 //    }
 
-    public void checkoutCustomer(ISell item){
+    public void checkoutCustomer(){
 //      check payment type is ok
 //      get price from item
-        double price = item.getPrice();
+        Customer customer = customerQueue.get(0);
+        double price = customer.getTotalOfBasket();
     //
 //      add that money to totalSales
         addToSalesAmount(price);
 
-//      add to listOfSales
-        listOfSales.add(item);
+//      trigger buying
+//      customer.buyBasket(PaymentMethod paymentMethod);
+        customer.clearBasket();
     }
 }

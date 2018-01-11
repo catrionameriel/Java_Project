@@ -15,7 +15,7 @@ public class Ticket {
     }
 
     public double getTicketPrice(){
-        return price;
+        return this.price;
     }
 
     public void setTicketPrice(double newPrice) {
