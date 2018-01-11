@@ -11,7 +11,7 @@ public class CreditCardTest {
 
     @Before
     public void before(){
-        creditCard = new CreditCard(10000.00, "J Goodall", 1234567812345678L, CreditCardType.VISA);
+        creditCard = new CreditCard("Credit Card", 10000.00, "J Goodall", 1234567812345678L, CreditCardType.VISA);
     }
 
     @Test
@@ -34,4 +34,8 @@ public class CreditCardTest {
         assertEquals(1234567812345678L, creditCard.getCardNumber());
     }
 
+    @Test
+    public void canGetPaymentName() {
+        assertEquals("Credit Card", creditCard.getPaymentName());
+    }
 }

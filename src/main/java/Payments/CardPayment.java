@@ -6,8 +6,8 @@ public abstract class CardPayment extends PaymentMethod {
     private long cardNumber;
 
 
-    protected CardPayment(double availableFunds, String name, long cardNumber) {
-        super(availableFunds);
+    protected CardPayment(String paymentName, double availableFunds, String name, long cardNumber) {
+        super(paymentName, availableFunds);
         nameOnCard = name;
         this.cardNumber = cardNumber;
     }

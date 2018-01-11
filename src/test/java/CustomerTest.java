@@ -23,8 +23,8 @@ public class CustomerTest {
     public void before(){
         ticket = new Ticket(2, 10.50);
         ticket2 = new Ticket(3, 11.50);
-        card = new CreditCard(10000.00, "J Goodall", 1234567812345678L, CreditCardType.MASTERCARD);
-        card2 = new CreditCard(5000, "J Goodall", 1234567812345677L, CreditCardType.VISA);
+        card = new CreditCard("Credit Card", 10000.00, "J Goodall", 1234567812345678L, CreditCardType.MASTERCARD);
+        card2 = new CreditCard("Credit Card",5000, "J Goodall", 1234567812345677L, CreditCardType.VISA);
         ArrayList<PaymentMethod> pMethods = new ArrayList<>();
         pMethods.add(card);
         ArrayList<PaymentMethod> emptyPMethod = new ArrayList<>();

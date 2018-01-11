@@ -4,8 +4,8 @@ public class CreditCard extends CardPayment {
 
     private CreditCardType typeOfCreditCard;
 
-    public CreditCard(double availableFunds, String name, long cardNumber, CreditCardType type) {
-        super(availableFunds, name, cardNumber);
+    public CreditCard(String paymentName, double availableFunds, String name, long cardNumber, CreditCardType type) {
+        super(paymentName, availableFunds, name, cardNumber);
         typeOfCreditCard = type;
     }
 

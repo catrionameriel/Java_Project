@@ -22,7 +22,7 @@ public class VenueTest {
 
     @Before
     public void before(){
-        card = new CreditCard(10000.00, "J Goodall", 1234567812345678L, CreditCardType.MASTERCARD);
+        card = new CreditCard("Credit Card", 10000.00, "J Goodall", 1234567812345678L, CreditCardType.MASTERCARD);
         ArrayList<PaymentMethod> pMethods = new ArrayList<>();
         pMethods.add(card);
         customer = new Customer(pMethods);

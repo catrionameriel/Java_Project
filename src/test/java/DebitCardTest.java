@@ -11,7 +11,7 @@ public class DebitCardTest {
 
     @Before
     public void before(){
-        debitCard = new DebitCard(2000, "P Docherty", 1234567812345678L, DebitCardType.MAESTRO);
+        debitCard = new DebitCard("Debit Card", 2000, "P Docherty", 1234567812345678L, DebitCardType.MAESTRO);
     }
 
     @Test

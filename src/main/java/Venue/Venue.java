@@ -70,10 +70,10 @@ public class Venue {
         return paymentMethods.size();
     }
 
-//    public PaymentMethodType selectPaymentType(PaymentMethodType paymentType) {
-//        int index = paymentMethods.indexOf(paymentType);
-//        return paymentMethods.get(index);
-//    }
+    public PaymentMethodType selectPaymentType(PaymentMethodType paymentType) {
+        int index = paymentMethods.indexOf(paymentType);
+        return paymentMethods.get(index);
+    }
 
     public void addCustomerToQueue(Customer customer) {
         customerQueue.add(customer);
@@ -95,9 +95,11 @@ public class Venue {
         }
     }
 
-    public boolean checkPaymentType(PaymentMethod paymentMethod){
-        return (paymentMethod)
-    }
+//    public boolean checkPaymentType(PaymentMethod paymentMethod){
+//        for (PaymentMethodType pm : paymentMethods) {
+//            if (paymentMethod)
+//        }
+//    }
 
     public void checkoutCustomer(ISell item){
 //      check payment type is ok
@@ -109,5 +111,5 @@ public class Venue {
 
 //      add to listOfSales
         listOfSales.add(item);
-}
+    }
 }
