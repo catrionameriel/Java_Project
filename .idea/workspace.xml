@@ -2,26 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e40a327-0c89-41b9-b385-5ff10d01c807" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Customer/Customer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Customer/DebitCard.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Customer/DebitCardType.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Venue/Artist.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Venue/Event.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Venue/Gig.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Venue/ISell.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Venue/PaymentMethodType.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Venue/Ticket.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Venue/Venue.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/ArtistTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/CreditCardTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/DebitCardTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/GigTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/TicketTest.class" afterPath="" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/PaymentMethodTypeTest.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Customer/CardPayment.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Customer/CreditCard.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Customer/CreditCardType.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Customer/PaymentMethod.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Customer/CardPayment.java" afterPath="$PROJECT_DIR$/src/main/java/Payments/CardPayment.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Customer/CreditCard.java" afterPath="$PROJECT_DIR$/src/main/java/Payments/CreditCard.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Customer/CreditCardType.java" afterPath="$PROJECT_DIR$/src/main/java/Payments/CreditCardType.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Customer/Customer.java" afterPath="$PROJECT_DIR$/src/main/java/Customer/Customer.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Customer/DebitCard.java" afterPath="$PROJECT_DIR$/src/main/java/Payments/DebitCard.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Customer/DebitCardType.java" afterPath="$PROJECT_DIR$/src/main/java/Payments/DebitCardType.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Customer/PaymentMethod.java" afterPath="$PROJECT_DIR$/src/main/java/Payments/PaymentMethod.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Venue/Gig.java" afterPath="$PROJECT_DIR$/src/main/java/Venue/Gig.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Venue/ISell.java" afterPath="$PROJECT_DIR$/src/main/java/Venue/ISell.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Venue/Ticket.java" afterPath="$PROJECT_DIR$/src/main/java/Venue/Ticket.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Venue/PaymentMethodType.java" afterPath="$PROJECT_DIR$/src/main/java/Venue/PaymentMethodType.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Venue/Venue.java" afterPath="$PROJECT_DIR$/src/main/java/Venue/Venue.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CreditCardTest.java" afterPath="$PROJECT_DIR$/src/test/java/CreditCardTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CustomerTest.java" afterPath="$PROJECT_DIR$/src/test/java/CustomerTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DebitCardTest.java" afterPath="$PROJECT_DIR$/src/test/java/DebitCardTest.java" />
       <change beforePath="$PROJECT_DIR$/src/test/java/GigTest.java" afterPath="$PROJECT_DIR$/src/test/java/GigTest.java" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TicketTest.java" afterPath="$PROJECT_DIR$/src/test/java/TicketTest.java" />
       <change beforePath="$PROJECT_DIR$/src/test/java/VenueTest.java" afterPath="$PROJECT_DIR$/src/test/java/VenueTest.java" />
@@ -43,104 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Customer/Customer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1278">
-              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#623#624#0" expanded="true" />
-                <element signature="e#667#668#0" expanded="true" />
-                <element signature="e#986#987#0" expanded="true" />
-                <element signature="e#1022#1023#0" expanded="true" />
-                <element signature="e#1072#1073#0" expanded="true" />
-                <element signature="e#1106#1107#0" expanded="true" />
-                <element signature="e#1159#1160#0" expanded="true" />
-                <element signature="e#1196#1197#0" expanded="true" />
-                <element signature="e#1232#1233#0" expanded="true" />
-                <element signature="e#1265#1266#0" expanded="true" />
-                <element signature="e#1311#1312#0" expanded="true" />
-                <element signature="e#1346#1347#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ISell.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Venue/ISell.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gig.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Venue/Gig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="618">
-              <caret line="69" column="59" lean-forward="false" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
-              <folding>
-                <element signature="e#761#762#0" expanded="true" />
-                <element signature="e#802#803#0" expanded="true" />
-                <element signature="e#846#847#0" expanded="true" />
-                <element signature="e#889#890#0" expanded="true" />
-                <element signature="e#933#934#0" expanded="true" />
-                <element signature="e#970#971#0" expanded="true" />
-                <element signature="e#1148#1149#0" expanded="true" />
-                <element signature="e#1187#1188#0" expanded="true" />
-                <element signature="e#1237#1238#0" expanded="true" />
-                <element signature="e#1283#1284#0" expanded="true" />
-                <element signature="e#1331#1332#0" expanded="true" />
-                <element signature="e#1371#1372#0" expanded="true" />
-                <element signature="e#1576#1577#0" expanded="true" />
-                <element signature="e#1612#1613#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ticket.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Venue/Ticket.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <element signature="e#208#209#0" expanded="true" />
-                <element signature="e#233#234#0" expanded="true" />
-                <element signature="e#270#271#0" expanded="true" />
-                <element signature="e#298#299#0" expanded="true" />
-                <element signature="e#349#350#0" expanded="true" />
-                <element signature="e#386#387#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Event.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Venue/Event.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-              <folding>
-                <element signature="e#360#361#0" expanded="true" />
-                <element signature="e#392#393#0" expanded="true" />
-                <element signature="e#727#728#0" expanded="true" />
-                <element signature="e#763#764#0" expanded="true" />
-                <element signature="e#810#811#0" expanded="true" />
-                <element signature="e#848#849#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Venue.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Venue.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Venue/Venue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="76" column="34" lean-forward="false" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
+            <state relative-caret-position="402">
+              <caret line="94" column="5" lean-forward="false" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#546#547#0" expanded="true" />
@@ -167,48 +73,19 @@
                 <element signature="e#1509#1510#0" expanded="true" />
                 <element signature="e#1549#1550#0" expanded="true" />
                 <element signature="e#1593#1594#0" expanded="true" />
-                <element signature="e#2348#2349#0" expanded="true" />
-                <element signature="e#2391#2392#0" expanded="true" />
-                <element signature="e#2433#2434#0" expanded="true" />
-                <element signature="e#2476#2477#0" expanded="true" />
-                <element signature="e#2521#2522#0" expanded="true" />
-                <element signature="e#2560#2561#0" expanded="true" />
-                <element signature="e#2604#2605#0" expanded="true" />
-                <element signature="e#2661#2662#0" expanded="true" />
+                <element signature="e#1836#1837#0" expanded="true" />
+                <element signature="e#1879#1880#0" expanded="true" />
+                <element signature="e#1921#1922#0" expanded="true" />
+                <element signature="e#1964#1965#0" expanded="true" />
+                <element signature="e#2009#2010#0" expanded="true" />
+                <element signature="e#2048#2049#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GigTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/GigTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9">
-              <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-              <folding>
-                <element signature="e#1111#1112#0" expanded="true" />
-                <element signature="e#1169#1170#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VenueTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/VenueTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="27" column="68" lean-forward="true" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3211#3212#0" expanded="true" />
-                <element signature="e#3275#3276#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Artist.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Venue/Artist.java">
+      <file leaf-file-name="DebitCard.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Payments/DebitCard.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
               <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -217,13 +94,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PaymentMethod.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Customer/PaymentMethod.java">
+      <file leaf-file-name="DebitCardType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Payments/DebitCardType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Customer/Customer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-390">
+              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#654#655#0" expanded="true" />
+                <element signature="e#698#699#0" expanded="true" />
+                <element signature="e#1017#1018#0" expanded="true" />
+                <element signature="e#1053#1054#0" expanded="true" />
+                <element signature="e#1103#1104#0" expanded="true" />
+                <element signature="e#1137#1138#0" expanded="true" />
+                <element signature="e#1190#1191#0" expanded="true" />
+                <element signature="e#1227#1228#0" expanded="true" />
+                <element signature="e#1263#1264#0" expanded="true" />
+                <element signature="e#1296#1297#0" expanded="true" />
+                <element signature="e#1342#1343#0" expanded="true" />
+                <element signature="e#1377#1378#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PaymentMethod.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Payments/PaymentMethod.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
               <folding>
                 <element signature="e#141#142#0" expanded="true" />
+                <element signature="e#193#194#0" expanded="true" />
                 <element signature="e#233#234#0" expanded="true" />
                 <element signature="e#270#271#0" expanded="true" />
                 <element signature="e#306#307#0" expanded="true" />
@@ -231,6 +143,62 @@
                 <element signature="e#388#389#0" expanded="true" />
                 <element signature="e#428#429#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PaymentMethodTypeTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/PaymentMethodTypeTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#245#246#0" expanded="true" />
+                <element signature="e#302#303#0" expanded="true" />
+                <element signature="e#344#345#0" expanded="true" />
+                <element signature="e#422#423#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CardPayment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Payments/CardPayment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreditCard.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Payments/CreditCard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreditCardType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Payments/CreditCardType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PaymentMethodType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Venue/PaymentMethodType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -557,16 +525,19 @@
         <option value="$PROJECT_DIR$/src/main/java/Customer/DebitCard.java" />
         <option value="$PROJECT_DIR$/src/main/java/Customer/CardPayment.java" />
         <option value="$PROJECT_DIR$/src/test/java/DebitCardTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/CustomerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Venue/Event.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Venue/Ticket.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Venue/ISell.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Venue/Gig.java" />
         <option value="$PROJECT_DIR$/src/test/java/TicketTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/GigTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/VenueTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Venue/Ticket.java" />
         <option value="$PROJECT_DIR$/src/main/java/Customer/Customer.java" />
+        <option value="$PROJECT_DIR$/src/test/java/CustomerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Venue/PaymentMethodType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Payments/PaymentMethod.java" />
+        <option value="$PROJECT_DIR$/src/test/java/PaymentMethodTypeTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Venue/Venue.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Venue/ISell.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Venue/Gig.java" />
       </list>
     </option>
   </component>
@@ -634,6 +605,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Payments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="venue_booking_system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="venue_booking_system" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Venue" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -677,7 +656,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.VenueTest">
+  <component name="RunManager" selected="JUnit.All in venue_booking_system_test">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -697,6 +676,26 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+    </configuration>
+    <configuration name="All in venue_booking_system_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="venue_booking_system_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration name="CustomerTest.canBuyTicket" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -718,14 +717,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="CustomerTest.canSetTotalFunds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PaymentMethodTypeTest.canGetType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="venue_booking_system_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CustomerTest" />
-      <option name="METHOD_NAME" value="canSetTotalFunds" />
+      <option name="MAIN_CLASS_NAME" value="PaymentMethodTypeTest" />
+      <option name="METHOD_NAME" value="canGetType" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -738,15 +737,15 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="GigTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VenueTest.canSellTicket" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="venue_booking_system_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GigTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="VenueTest" />
+      <option name="METHOD_NAME" value="canSellTicket" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -758,34 +757,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="VenueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VenueTest.cannotSellTicketIfSoldOut" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="venue_booking_system_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="VenueTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="VenueTest.enoughTickets" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="venue_booking_system_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="VenueTest" />
-      <option name="METHOD_NAME" value="enoughTickets" />
+      <option name="METHOD_NAME" value="cannotSellTicketIfSoldOut" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -859,19 +838,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.CustomerTest.canSetTotalFunds" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.CustomerTest.canBuyTicket" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.VenueTest.enoughTickets" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.GigTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.VenueTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.VenueTest.canSellTicket" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.VenueTest.cannotSellTicketIfSoldOut" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CustomerTest.canBuyTicket" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.All in venue_booking_system_test" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.PaymentMethodTypeTest.canGetType" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.VenueTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.GigTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.VenueTest.enoughTickets" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.CustomerTest.canBuyTicket" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.CustomerTest.canSetTotalFunds" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.All in venue_booking_system_test" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.PaymentMethodTypeTest.canGetType" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CustomerTest.canBuyTicket" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.VenueTest.cannotSellTicketIfSoldOut" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.VenueTest.canSellTicket" />
       </list>
     </recent_temporary>
   </component>
@@ -892,35 +871,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CustomerTest_canBuyTicket - 2018.01.09 at 19h 26m 17s.xml">
+    <history-entry file="All_in_venue_booking_system_test - 2018.01.11 at 11h 57m 07s.xml">
+      <configuration name="All in venue_booking_system_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_venue_booking_system_test - 2018.01.11 at 12h 15m 02s.xml">
+      <configuration name="All in venue_booking_system_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_venue_booking_system_test - 2018.01.11 at 12h 20m 31s.xml">
+      <configuration name="All in venue_booking_system_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerTest_canBuyTicket - 2018.01.11 at 11h 52m 14s.xml">
       <configuration name="CustomerTest.canBuyTicket" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CustomerTest_canBuyTicket - 2018.01.09 at 19h 26m 49s.xml">
+    <history-entry file="CustomerTest_canBuyTicket - 2018.01.11 at 11h 54m 02s.xml">
       <configuration name="CustomerTest.canBuyTicket" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CustomerTest_canBuyTicket - 2018.01.09 at 19h 28m 47s.xml">
+    <history-entry file="CustomerTest_canBuyTicket - 2018.01.11 at 11h 54m 25s.xml">
       <configuration name="CustomerTest.canBuyTicket" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CustomerTest_canBuyTicket - 2018.01.09 at 19h 29m 03s.xml">
+    <history-entry file="CustomerTest_canBuyTicket - 2018.01.11 at 11h 55m 03s.xml">
       <configuration name="CustomerTest.canBuyTicket" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CustomerTest_canBuyTicket - 2018.01.09 at 19h 29m 16s.xml">
+    <history-entry file="CustomerTest_canBuyTicket - 2018.01.11 at 11h 56m 39s.xml">
       <configuration name="CustomerTest.canBuyTicket" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CustomerTest_canSetTotalFunds - 2018.01.09 at 19h 20m 37s.xml">
-      <configuration name="CustomerTest.canSetTotalFunds" configurationId="JUnit" />
+    <history-entry file="CustomerTest_canBuyTicket - 2018.01.11 at 11h 56m 50s.xml">
+      <configuration name="CustomerTest.canBuyTicket" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CustomerTest_canSetTotalFunds - 2018.01.09 at 19h 20m 55s.xml">
-      <configuration name="CustomerTest.canSetTotalFunds" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VenueTest - 2018.01.08 at 15h 16m 34s.xml">
-      <configuration name="VenueTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VenueTest_canAddToCustomersQueue - 2018.01.08 at 15h 16m 27s.xml">
-      <configuration name="VenueTest.canAddToCustomersQueue" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VenueTest_canRemoveCustomersFromQueue - 2018.01.08 at 15h 18m 16s.xml">
-      <configuration name="VenueTest.canRemoveCustomersFromQueue" configurationId="JUnit" />
+    <history-entry file="PaymentMethodTypeTest_canGetType - 2018.01.11 at 12h 19m 51s.xml">
+      <configuration name="PaymentMethodTypeTest.canGetType" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -940,7 +919,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19384836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25107297" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -992,7 +971,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>

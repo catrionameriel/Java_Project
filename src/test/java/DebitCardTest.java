@@ -1,6 +1,5 @@
-import Customer.CreditCardType;
-import Customer.DebitCard;
-import Customer.DebitCardType;
+import Payments.DebitCard;
+import Payments.DebitCardType;
 import org.junit.Before;
 import org.junit.Test;
 

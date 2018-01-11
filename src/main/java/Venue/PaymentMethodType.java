@@ -6,7 +6,8 @@ public enum PaymentMethodType {
     DEBITCARD("Debit Card"),
     CHEQUE("Cheque"),
     BACS("Bank Transfer"),
-    CASH("Cash");
+    CASH("Cash"),
+    PAYPAL("Paypal");
 
     private String paymentMethodName;
 

@@ -1,6 +1,7 @@
 package Venue;
 
 import Customer.Customer;
+import Payments.PaymentMethod;
 
 import java.util.ArrayList;
 
@@ -69,31 +70,10 @@ public class Venue {
         return paymentMethods.size();
     }
 
-    public PaymentMethodType selectPaymentType(PaymentMethodType paymentType) {
-        int index = paymentMethods.indexOf(paymentType);
-        return paymentMethods.get(index);
-    }
-
-    public void CheckoutCustomer (){
-//      check payment type is ok
-//      get price from item
-    double price = sale.getPrice();
-
-    //
-//       add that money to totalSales
-    addToSalesAmount(price);
-
-//       add to listOfSales
-         listOfSales.add(sale);
-}
-
-    public void sellTicket(ISell item, PaymentMethodType paymentMethod){
-//       check capacity
-//
-         Customer customer = customerQueue.get(0);
-         Ticket ticket = item.sell();
-         customer.addItemInBasket(ticket);
-    }
+//    public PaymentMethodType selectPaymentType(PaymentMethodType paymentType) {
+//        int index = paymentMethods.indexOf(paymentType);
+//        return paymentMethods.get(index);
+//    }
 
     public void addCustomerToQueue(Customer customer) {
         customerQueue.add(customer);
@@ -107,7 +87,27 @@ public class Venue {
         customerQueue.remove(0);
     }
 
-    public boolean enoughTickets(Gig gig){
-        return gig.getNumberOfUnsoldTickets() > 0;
+    public void sellTicket(ISell item){
+        Customer customer = customerQueue.get(0);
+        if(item.canSell()){
+            Ticket ticket = item.sell();
+            customer.addItemInBasket(ticket);
+        }
     }
+
+    public boolean checkPaymentType(PaymentMethod paymentMethod){
+        return (paymentMethod)
+    }
+
+    public void checkoutCustomer(ISell item){
+//      check payment type is ok
+//      get price from item
+        double price = item.getPrice();
+    //
+//      add that money to totalSales
+        addToSalesAmount(price);
+
+//      add to listOfSales
+        listOfSales.add(item);
+}
 }

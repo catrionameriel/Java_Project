@@ -1,8 +1,7 @@
-import Customer.CreditCard;
-import Customer.CreditCardType;
+import Payments.CreditCard;
+import Payments.CreditCardType;
 import Customer.Customer;
-import Customer.PaymentMethod;
-import Venue.Gig;
+import Payments.PaymentMethod;
 import Venue.Ticket;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,15 +14,15 @@ public class CustomerTest {
 
     private Customer customer1;
     private Customer customer2;
-    private Gig gig;
     private PaymentMethod card;
     private PaymentMethod card2;
     private Ticket ticket;
+    private Ticket ticket2;
 
     @Before
     public void before(){
-        gig = new Gig(1,12, 2013, 2000, 10.50);
-        ticket = new Ticket(2);
+        ticket = new Ticket(2, 10.50);
+        ticket2 = new Ticket(3, 11.50);
         card = new CreditCard(10000.00, "J Goodall", 1234567812345678L, CreditCardType.MASTERCARD);
         card2 = new CreditCard(5000, "J Goodall", 1234567812345677L, CreditCardType.VISA);
         ArrayList<PaymentMethod> pMethods = new ArrayList<>();
@@ -99,9 +98,17 @@ public class CustomerTest {
     }
 
     @Test
+    public void canGetTotalOfBasket(){
+        customer1.addItemInBasket(ticket);
+        customer1.addItemInBasket(ticket2);
+        assertEquals(22.00, customer1.getTotalOfBasket(), 0.01);
+    }
+
+    @Test
     public void canBuyTicket() {
+        customer1.addItemInBasket(ticket);
         customer1.addPaymentMethod(card2);
-        customer1.buyGigTicket(gig, card);
+        customer1.buyBasket(card);
         assertEquals(14989.5, customer1.getTotalFunds(), 0.01);
         assertEquals(1, customer1.countItemsInBasket());
         assertEquals(9989.5, card.getAvailableFunds(), 0.01);

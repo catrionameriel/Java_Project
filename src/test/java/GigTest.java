@@ -90,6 +90,19 @@ public class GigTest {
         assertEquals(1, gig1.getNumberOfSoldTickets());
     }
 
+    @Test
+    public void enoughTicketsToSell__True(){
+        assertEquals(true, gig1.canSell());
+    }
+
+    @Test
+    public void enoughTicketsToSell__False(){
+        for (int i=0; i<gig1.getCapacity(); i++){
+            gig1.removeFirstTicketFromUnsold();
+        }
+        assertEquals(false, gig1.canSell());
+    }
+
 //    How do I do a pretty date?
 
 //    @Test

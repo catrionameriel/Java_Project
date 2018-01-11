@@ -1,4 +1,4 @@
-package Customer;
+package Payments;
 
 public abstract class CardPayment extends PaymentMethod {
 

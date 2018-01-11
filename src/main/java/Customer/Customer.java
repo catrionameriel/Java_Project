@@ -1,5 +1,6 @@
 package Customer;
 
+import Payments.PaymentMethod;
 import Venue.Ticket;
 
 import java.util.ArrayList;
@@ -57,15 +58,19 @@ public class Customer {
         totalFunds += money;
     }
 
+    public double getTotalOfBasket(){
+        double total = 0;
+        for (Ticket ticket : basket) {
+            double price = ticket.getTicketPrice();
+            total += price;
+        }
+        return total;
+    }
+
     public void buyBasket(PaymentMethod paymentMethodChoice){
-          for (Ticket ticket : basket) {
-//        find price of ticket
-              double price = ticket.getTicketPrice();
-//        take money away from paymentMethod
-              paymentMethodChoice.pay(price);
-//        update total funds
-              setTotal();
-          }
+            double toPay = getTotalOfBasket();
+            paymentMethodChoice.pay(toPay);
+            setTotal();
     }
 
 }

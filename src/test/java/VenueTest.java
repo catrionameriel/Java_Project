@@ -1,3 +1,6 @@
+import Payments.CreditCard;
+import Payments.CreditCardType;
+import Payments.PaymentMethod;
 import Venue.*;
 import Customer.*;
 import org.junit.Before;
@@ -7,11 +10,12 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 public class VenueTest {
 
     private Venue gigVenue;
-    private ISell item;
+    private Gig item;
     private PaymentMethodType creditCard;
     private Customer customer;
     private PaymentMethod card;
@@ -110,7 +114,19 @@ public class VenueTest {
     }
 
     @Test
-    public void enoughTickets(){
-        assertEquals(true, gigVenue.enoughTickets(item));
+    public void canSellTicket() {
+        gigVenue.addCustomerToQueue(customer);
+        gigVenue.sellTicket(item);
+        assertEquals(1, customer.countItemsInBasket());
+    }
+
+    @Test
+    public void cannotSellTicketIfSoldOut() {
+        for (int i=0; i< item.getCapacity(); i++){
+            item.removeFirstTicketFromUnsold();
+        }
+        gigVenue.addCustomerToQueue(customer);
+        gigVenue.sellTicket(item);
+        assertEquals(0, customer.countItemsInBasket());
     }
 }

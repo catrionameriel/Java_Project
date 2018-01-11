@@ -67,6 +67,6 @@ public class Gig extends Event implements ISell {
 
     @Override
     public boolean canSell() {
-        return (this.unsoldTickets.size() > 0) true : null;
+        return (this.unsoldTickets.size() > 0);
     }
 }

@@ -10,7 +10,7 @@ public class TicketTest {
 
     @Before
     public void before(){
-        ticket = new Ticket(1);
+        ticket = new Ticket(1, 10.50);
     }
 
     @Test

@@ -1,4 +1,4 @@
-package Customer;
+package Payments;
 
 public class CreditCard extends CardPayment {
 
