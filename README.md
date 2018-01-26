@@ -1,5 +1,47 @@
+# Venue Ticketing System
+
+A venue booking ticketing system, modelled on the Glasgow Life website, which allows the owner to sell tickets to customers.
+
+### Built with:
+
+- Java - object orientated programming language
+- JUnit - unit testing framework
+- IntelliJ - IDE
+
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+To run this web app, you will need to have:
+- IntelliJ
+- SDK version 9.0
+
+### Installing
+
+1. Open IntelliJ
+2. Open venue_booking_system project
+
+
+## Motivation
+
+This web app was created as part of a project undertaken while attending CodeClan's 16-week intensive course. At the beginning of the week, we were given four briefs to choose from in which we would implement, consolidate and expand on everything we'd learnt so far.
+
+This included:
+
+- Java fundamentals
+- TDD
+- OOP
+- SOLID principles
+
+Having recently had a bad UX on a ticketing site, I decided to create my own.
+
+
+## Brief
+
 # Concert Venue Booking System
-Goal: Practice OO modelling in Java (unit tests, no UI)
 
 You are required to build an app that allows a Music Venue to sell Tickets to Customers.
 
@@ -32,3 +74,14 @@ The Customer must:
 * Add collection method
 * Add booking/payment fee (could be different for different payment/collection method)
 * Add venues
+
+
+
+## Author
+
+**Catriona Meriel** - Author
+
+
+### Contributing
+
+When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
