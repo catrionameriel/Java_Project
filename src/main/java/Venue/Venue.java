@@ -19,6 +19,7 @@ public class Venue {
         totalRefunds = 0;
         listOfSales = new ArrayList<>();
         paymentMethods = new ArrayList<>();
+//        change this to have to be added when instantiated
         customerQueue = new ArrayList<>();
     }
 
@@ -114,5 +115,6 @@ public class Venue {
 //      trigger buying
 //      customer.buyBasket(PaymentMethod paymentMethod);
         customer.clearBasket();
+        removeCustomerFromQueue();
     }
 }
